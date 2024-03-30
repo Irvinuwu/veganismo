@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+/* diseño de menu */
+.menu {
+    background-color: white;
+    padding: 20px;
+}
+
+.menu li,
+.menu a {
+    font-family: sans-serif;
+    font-weight: bold;
+    list-style: none;
+    display: inline-block;
+    padding: 5px 10px;
+    color: rgba(128, 127, 127, 0.9);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.menu li:hover,
+.menu a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.menu ul {
+    text-align: right;
+    padding: 20px;
+}
+
+/*termina menu*/
+
+/*inicio*/
+.destacado{
+    background-color: black;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    padding: 20px; /* Agregado para mejorar el espacio en pantallas pequeñas */
+}
+.destacado-2 {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 20px; 
+    flex-direction: column;
+}
+.img-chopo {
+    height: 35%;
+    width: 45%;
+    margin: 10px; /* Espaciado entre la imagen y el contenido */
+}
+
+.datos {
+    font-size: 1rem;
+    align-items: center;
+    color: white;
+    margin: 10px; /* Espaciado entre los elementos */
+    flex: 1; /* Para que ocupe el espacio disponible */
+}
+
+.titulo-museo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin: 0 0 1% 0;
+    color: rgb(74, 219, 74);
+}
+
+.descripcio-museo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Eventos*/
+.eventos {
+    background-color: rgb(243, 242, 242);
+    padding: 20px; /* Agregado para mejorar el espacio en pantallas pequeñas */
+}
+
+.datos-eventos h2 {
+    font-size: 2.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 5% 0 2%;
+    color: rgb(49, 147, 49);
+}
+
+.datos-eventos p {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: start;
+    margin: 0 10% 5%;
+}
+
+.info-eventos {
+    margin: 5% 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.caravana {
+    border-radius: 5%;
+    height: 90%;
+    width: 60%;
+    margin: 2%;
+}
+
+.piñata {
+    border-radius: 5%;
+    width: 30%;
+    margin: 2%;
+}
+
+/*pie de pagina*/
+.pie-pagina {
+    background-color: black;
+    height: 300px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px; /* Agregado para mejorar el espacio en pantallas pequeñas */
+}
+
+.pie-pagina img {
+    height: 20px;
+    width: 20px;
+    margin: 0 auto;
+}
+
+.pie-pagina p {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+/* Video Container */
+.video-container {
+    text-align: center;
+    margin: 5% auto; /* Centra el contenedor verticalmente */
+    max-width: 80%; /* Limita el ancho máximo del contenedor */
+}
+
+/* Estilo del video */
+.video-container iframe {
+    width: 100%; /* Establece el ancho del video al 100% del contenedor */
+    height: auto; /* Hace que la altura del video se ajuste automáticamente */
+    max-width: 800px; /* Limita el ancho máximo del video */
+}
+
+@media screen and (max-width: 768px) {
+    .destacado,
+    .destacado-2 {
+        flex-direction: column-reverse; /* Cambia la dirección de los elementos a una columna y los invierte */
+    }
+
+    .img-chopo,
+    .img-chopo-2 {
+        width: 100%; /* Hace que las imágenes ocupen el ancho completo del contenedor */
+        height: auto; /* Ajusta automáticamente la altura de las imágenes */
+        margin: 10px 0; /* Elimina el margen horizontal y agrega margen superior e inferior */
+    }
+
+    .datos {
+        order: 2; /* Cambia el orden de los elementos, colocando los datos debajo de la imagen */
+    }
+}
+@media screen and (min-width: 769px) {
+    .destacado-2 {
+        flex-direction: row; /* Cambia la dirección de los elementos a una fila */
+        align-items: center; /* Alinea los elementos verticalmente en el centro */
+    }
+
+    .img-chopo {
+        width: 45%; /* Ancho deseado para la imagen */
+        margin-right: 10px; /* Margen derecho para separar la imagen del texto */
+    }
+
+    .datos {
+        width: 55%; /* Ancho deseado para el contenedor de datos */
+    }
+}
+

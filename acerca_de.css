@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* diseño de menu */
+.menu {
+    background-color: white;
+    padding: 20px; /* Agregado para mejorar el espacio en pantallas pequeñas */
+}
+
+.menu li,
+.menu a {
+    font-family: sans-serif;
+    font-weight: bold;
+    list-style: none;
+    display: inline-block;
+    padding: 5px 10px;
+    color: rgba(128, 127, 127, 0.9);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.menu li:hover,
+.menu a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.menu ul {
+    text-align: right;
+    padding: 20px;
+}
+/*termina menu*/
+
+.nombre {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 60px;
+    box-shadow:  24px 24px 48px #565353,
+                -24px -24px 48px #ffffff;
+    margin: 90px auto; /* Centrar verticalmente y horizontalmente */
+    max-width: 50%; /* Limitar el ancho para evitar que el contenido se estire demasiado */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;  
+}
+
+p{
+    font-size: 25px;
+}
+
+/* Reglas de medios para hacer responsive */
+@media screen and (max-width: 768px) {
+    .nombre {
+        margin: 50px auto; /* Ajustar el margen en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu ul {
+        text-align: center; /* Centrar los elementos del menú en pantallas pequeñas */
+    }
+}

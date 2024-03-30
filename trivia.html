@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Vegana</title>
+  <link rel="stylesheet" href="trivia.css">
+</head>
+
+<header>
+    <div class = "menu">
+
+        <img src="" alt="">
+    
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="acerca_de.html">Acerca de</a></li>
+                <li><a href="index.html"> Salir</a></li>
+
+            </ul>
+            </nav>
+
+    </div>
+</header>
+
+<body>
+  <div class="trivia">
+    <h2>Trivia</h2>
+    <div class="pregunta">
+      <p>1. ¿Qué es el veganismo?</p>
+      <ul>
+        <li><input type="radio" name="pregunta1" value="a"> Un estilo de vida basado en la abstención del consumo de productos de origen animal.</li>
+        <li><input type="radio" name="pregunta1" value="b"> Una dieta que incluye carne y pescado.</li>
+        <li><input type="radio" name="pregunta1" value="c"> Una práctica que promueve el consumo excesivo de carne.</li>
+      </ul>
+    </div>
+    <div class="pregunta">
+      <p>2. ¿Qué aspectos del consumo evitan los veganos además de la carne y el pescado?</p>
+      <ul>
+        <li><input type="radio" name="pregunta2" value="a"> Solo evitan la carne y el pescado.</li>
+        <li><input type="radio" name="pregunta2" value="b"> También evitan los productos lácteos, huevos y otros productos de origen animal.</li>
+        <li><input type="radio" name="pregunta2" value="c"> No evitan ningún otro tipo de producto.</li>
+      </ul>
+    </div>
+    <div class="pregunta">
+      <p>3. ¿Qué implica el veganismo además de la alimentación?</p>
+      <ul>
+        <li><input type="radio" name="pregunta3" value="a"> Solo implica la alimentación.</li>
+        <li><input type="radio" name="pregunta3" value="b"> También implica la elección de productos de vestimenta y belleza libres de crueldad animal.</li>
+        <li><input type="radio" name="pregunta3" value="c"> No implica ningún otro aspecto de la vida.</li>
+      </ul>
+    </div>
+    <div class="pregunta">
+      <p>4. ¿Cuál es uno de los principios éticos fundamentales del veganismo?</p>
+      <ul>
+        <li><input type="radio" name="pregunta4" value="a"> La promoción del consumo de productos de origen animal.</li>
+        <li><input type="radio" name="pregunta4" value="b"> La Ética Animal, que se opone a la explotación y el sufrimiento de los animales.</li>
+        <li><input type="radio" name="pregunta4" value="c"> La indiferencia hacia el bienestar animal.</li>
+      </ul>
+    </div>
+    <div class="pregunta">
+      <p>5. ¿Cuáles son algunos de los beneficios del veganismo para la salud?</p>
+      <ul>
+        <li><input type="radio" name="pregunta5" value="a"> No hay beneficios para la salud asociados con el veganismo.</li>
+        <li><input type="radio" name="pregunta5" value="b"> Reducción del riesgo de enfermedades crónicas como enfermedades cardíacas, diabetes tipo 2 y ciertos tipos de cáncer.</li>
+        <li><input type="radio" name="pregunta5" value="c"> El veganismo solo causa deficiencias nutricionales.</li>
+      </ul>
+    </div>
+    <div class="pregunta">
+      <p>6. ¿Cómo puede contribuir el veganismo a la protección del medio ambiente?</p>
+      <ul>
+        <li><input type="radio" name="pregunta6" value="a"> No tiene ningún impacto en el medio ambiente.</li>
+        <li><input type="radio" name="pregunta6" value="b"> Al reducir la demanda de productos de origen animal, disminuye la presión sobre los recursos naturales y reduce la huella ecológica.</li>
+        <li><input type="radio" name="pregunta6" value="c"> El veganismo aumenta la contaminación ambiental.</li>
+      </ul>
+    </div>
+    <button id="verificar">Verificar Respuestas</button>
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    document.getElementById("verificar").addEventListener("click", function() {
+      // Obtener las respuestas seleccionadas
+      var respuestas = [];
+      var numPreguntas = 6;
+      for (var i = 1; i <= numPreguntas; i++) {
+        var pregunta = document.querySelector('input[name="pregunta' + i + '"]:checked');
+        if (pregunta) {
+          respuestas.push(pregunta.value);
+        } else {
+          alert("Por favor, responde todas las preguntas antes de verificar.");
+          return;
+        }
+      }
+
+      // Verificar las respuestas
+      var respuestasCorrectas = ["a", "b", "b", "b", "b", "b"];
+      var resultado = document.getElementById("resultado");
+      var puntaje = 0;
+      for (var j = 0; j < numPreguntas; j++) {
+        if (respuestas[j] === respuestasCorrectas[j]) {
+          puntaje++;
+        }
+      }
+      alert(resultado.textContent = "¡Respuestas correctas! Puntaje: " + puntaje + "/" + numPreguntas);
+    });
+  </script>
+</body>
+</html>

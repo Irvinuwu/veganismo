@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* diseño de menu */
+.menu {
+    background-color: white;
+}
+
+.menu li,
+.menu a {
+    font-family: sans-serif;
+    font-weight: bold;
+    list-style: none;
+    display: inline-block;
+    padding: 5px 10px;
+    color: rgba(128, 127, 127, 0.9);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.menu li:hover,
+.menu a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.menu ul {
+    text-align: right;
+    padding: 20px;
+}
+/*termina menu*/
+
+.trivia {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Añadido para mejorar el espacio en pantallas pequeñas */
+}
+h2{
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 2%;
+    text-align: center;
+    color: #1ed227;
+}
+
+.pregunta {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+#verificar {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; 
+    margin: 3% auto; 
+   
+}
+
+#verificar:hover {
+    background-color: #45a049;
+}
+
+/* Reglas de medios para hacer responsive */
+@media screen and (max-width: 768px) {
+    .menu {
+        padding: 10px;
+    }
+    
+    .menu ul {
+        text-align: left;
+    }
+    
+    .trivia {
+        padding: 0 10px; /* Reducir el relleno en pantallas más pequeñas */
+    }
+}
